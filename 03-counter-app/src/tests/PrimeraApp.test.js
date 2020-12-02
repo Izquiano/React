@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react'
+import '@testing-library/react'
 import PrimeraApp from '../PrimeraApp';
 import { shallow } from 'enzyme';
 
@@ -16,6 +16,24 @@ describe('Pruebas en <PrimeraApp.js />', () => {
     const wrapper = shallow( <PrimeraApp saludo={ saludo }/>)
     expect( wrapper ).toMatchSnapshot()
   })
+
+  test('debe de mostrar el subtítulo enviado por props', () => {
+    const saludo = 'Hola, soy Goku'
+    const subTitulo = 'Soy un subtitulo'
+    const wrapper = shallow( 
+      <PrimeraApp 
+        saludo={ saludo }
+        subtitulo={ subTitulo } 
+      />)
+
+      // shallow se comporta como document.querySelector
+      const textoParrafo = wrapper.find('p').text()
+      console.log(textoParrafo)
+      expect( textoParrafo ).toBe( subTitulo )
+  
+    })
+  
+  
   
   
 })
