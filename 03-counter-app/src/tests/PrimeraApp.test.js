@@ -26,7 +26,7 @@ describe('Pruebas en <PrimeraApp.js />', () => {
         subtitulo={ subTitulo } 
       />)
 
-      // shallow se comporta como document.querySelector
+      // shallow se comporta como document.querySelector('p')
       const textoParrafo = wrapper.find('p').text()
       console.log(textoParrafo)
       expect( textoParrafo ).toBe( subTitulo )
