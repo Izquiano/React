@@ -16,6 +16,12 @@ exports[`Pruebas sobre el componente <GifGrid /> Debe de mostar items cuando se 
       title="cualquier cosa"
       url="http://locakhost/culaquier/cosa.jpg"
     />
+    <GifGridItem
+      id="BFS"
+      key="BFS"
+      title="cualquier otra cosa"
+      url="http://locakhost/culaquier/otracosa.jpg"
+    />
   </div>
 </Fragment>
 `;
