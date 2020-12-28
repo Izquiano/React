@@ -9,7 +9,7 @@ export const CounterApp = () => {
     counter4: 40,
   });
 
-  const {counter1, counter2} = state
+  const { counter1, counter2 } = state
 
   return (
     <>
