@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./effects.css";
+import { Message } from "./Message";
 export const SimpleForm = () => {
 
   const [formState, setFormState] = useState({
@@ -9,16 +10,19 @@ export const SimpleForm = () => {
   const { name, email } = formState
 
   useEffect(() => {
-    console.log("Hey!");
+    // console.log("Hey!");
+    
   }, []);
 
   useEffect(() => {
-    console.log("FormState cambió!");
+    // console.log("FormState cambió!");
   }, [formState]);
 
   useEffect(() => {
-    console.log("Email cambió!");
+    // console.log("Email cambió!");
   }, [email]);
+
+
 
   const handleInputChange = ({target}) => {
   
@@ -60,6 +64,8 @@ export const SimpleForm = () => {
         />
 
       </div>
+
+      { (name === '123') && <Message /> }
     </>
   );
 };
